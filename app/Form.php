@@ -11,5 +11,5 @@ class Form extends Model
      *
      * @var array
      */
-    protects $fillable = ['name', 'email'];
+    // protects $fillable = ['name', 'email'];
 }

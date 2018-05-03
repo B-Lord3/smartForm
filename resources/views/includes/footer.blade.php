@@ -4,7 +4,7 @@
 
 
 	<section>
-		@include('includes.messages')
+		
 		<form method="post" action="forms.store">
 
             {{ csrf_field() }}

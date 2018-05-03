@@ -35,23 +35,22 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'body' => 'required'
-        ]);
+
+        // $this->validate($request, [
+        //     'name' => 'required',
+        //     'email' => 'required',
+        //     'body' => 'required',
+        // ]);
 
         // Create post
         //forms::create(Request::all());
 
         $form = new Form;
-        $form->name = $request->input('name');
-        $form->email = $request->input('email');
-        $form->message = $request->input('message');
-    
+        $form->name = request('name');
+        $form->email = request('email');
+        $form->message = request('message');
         $form->save();
-        return redirect()->route('forms.create')->with ('success', 'Message sent..');
-
+        return redirect('posts.thanks');
     }
 
     /**

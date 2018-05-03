@@ -18,7 +18,6 @@ Route::get('/generic', 'PagesController@showGeneric');
 
 Route::get('/elements', 'PagesController@showElements');
 
-
 Route::get('forms.create', 'PostsController@index');
 
 Route::post('forms.store', 'PostsController@store');
